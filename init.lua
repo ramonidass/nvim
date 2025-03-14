@@ -3,7 +3,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
+vim.g.have_nerd_font = false
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -104,6 +104,26 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set('n', '<Leader>n', ':Oil<CR>', { noremap = true, silent = true, desc = 'Open Oil file explorer' })
 vim.keymap.set('n', '<Leader>n', ':Oil --float<CR>', { noremap = true, silent = true, desc = 'Open Oil in floating window' })
 
+-- Keymaps for Oil.nvim
+-- vim.keymap.set('n', '<Esc><Esc>', function()
+--   local oil_is_open = vim.bo.filetype == 'oil'
+--   if oil_is_open then
+--     vim.cmd 'q'
+--   end
+-- end, { desc = 'Close Oil with ESC ESC' })
+--
+-- vim.keymap.set('n', '<C-s>', function()
+--   require('oil.actions').select { vertical = true }
+-- end, { desc = 'Open in vertical split' })
+--
+-- vim.keymap.set('n', '<C-h>', function()
+--   require('oil.actions').select { horizontal = true }
+-- end, { desc = 'Open in horizontal split' })
+--
+-- vim.keymap.set('n', '<C-t>', function()
+--   require('oil.actions').select { tab = true }
+-- end, { desc = 'Open in new tab' })
+--
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -246,7 +266,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
-        { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>g', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
   },
@@ -974,8 +994,9 @@ require('lazy').setup({
   require 'kickstart.plugins.lazygit',
   require 'kickstart.plugins.screenstart',
   require 'kickstart.plugins.neogit',
-  --add new plugin
   require 'kickstart.plugins.oil',
+  require 'kickstart.plugins.fugitive',
+  --add new plugin
   require('kickstart.plugins.terminal').setup(),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
