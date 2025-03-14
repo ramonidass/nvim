@@ -99,7 +99,11 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
-vim.keymap.set('n', '<Leader>n', ':Explore<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<Leader>n', ':Lexplore<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<Leader>n', ':diffoff!<CR>:buffer#<CR>:Explore<CR>', { noremap = true, silent = true })
+-- vim.keymap.set('n', '<Leader>n', ':Oil<CR>', { noremap = true, silent = true, desc = 'Open Oil file explorer' })
+vim.keymap.set('n', '<Leader>n', ':Oil --float<CR>', { noremap = true, silent = true, desc = 'Open Oil in floating window' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -971,6 +975,7 @@ require('lazy').setup({
   require 'kickstart.plugins.screenstart',
   require 'kickstart.plugins.neogit',
   --add new plugin
+  require 'kickstart.plugins.oil',
   require('kickstart.plugins.terminal').setup(),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
