@@ -5,12 +5,8 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
--- vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#7aa2f7', nocombine = true })
-vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#0000FF', nocombine = true })
 -- vim.cmd 'colorscheme nightshade'
--- vim.cmd 'colorscheme kanagawa' -- Replace with any theme you want
 -- vim.o.background = 'dark'
-
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
