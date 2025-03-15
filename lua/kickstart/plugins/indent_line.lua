@@ -4,6 +4,9 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      char = '▏', -- Character used for indentation lines
+      char_highlight = 'IndentBlanklineChar', -- Highlight group for the character
+    },
   },
 }
