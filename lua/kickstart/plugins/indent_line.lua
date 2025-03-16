@@ -1,17 +1,17 @@
-return {
-  { -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
-    main = 'ibl',
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {
-      --   char = '▏', -- Character used for indentation lines
-      --   char_highlight = 'IndentBlanklineChar', -- Highlight group for the character
-    },
-  },
-}
+-- return {
+--   { -- Add indentation guides even on blank lines
+--     'lukas-reineke/indent-blankline.nvim',
+--     -- Enable `lukas-reineke/indent-blankline.nvim`
+--     -- See `:help ibl`
+--     main = 'ibl',
+--     ---@module "ibl"
+--     ---@type ibl.config
+--     opts = {
+--       --   char = '▏', -- Character used for indentation lines
+--       --   char_highlight = 'IndentBlanklineChar', -- Highlight group for the character
+--     },
+--   },
+-- }
 -- return {
 --   'lukas-reineke/indent-blankline.nvim',
 --   -- Or "lukas-reineke/indent-blankline.nvim" if it's pulling the new ibl code
@@ -37,34 +37,35 @@ return {
 --     }
 --   end,
 -- }
--- return {
---   {
---     'lukas-reineke/indent-blankline.nvim',
---     event = { 'BufReadPre', 'BufNewFile' },
---     config = function()
---       -- 1) Require the hooks
---       local hooks = require 'ibl.hooks'
---
---       -- 2) Register a hook to set up your custom highlight
---       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
---         -- Pick a “Tokyo Blue” color. Some popular choices:
---         --   #7AA2F7 (TokyoNight) or #61AFEF (OneDark/VSCode-ish)
---         vim.api.nvim_set_hl(0, 'MyFatBlueIndent', { fg = '#7AA2F7' })
---       end)
---
---       -- 3) Set up ibl with a thicker character and single highlight
---       require('ibl').setup {
---         indent = {
---           -- This character is thicker than the standard "│"
---           char = '┃',
---           -- Use your custom highlight group
---           highlight = { 'MyFatBlueIndent' },
---         },
---         scope = {
---           -- Turn off scope lines if you only want indent lines
---           enabled = false,
---         },
---       }
---     end,
---   },
--- }
+return {
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    event = { 'BufReadPre', 'BufNewFile' },
+    config = function()
+      -- 1) Require the hooks
+      local hooks = require 'ibl.hooks'
+
+      -- 2) Register a hook to set up your custom highlight
+      hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+        -- Pick a “Tokyo Blue” color. Some popular choices:
+        --   #7AA2F7 (TokyoNight) or #61AFEF (OneDark/VSCode-ish)
+        vim.api.nvim_set_hl(0, 'MyFatBlueIndent', { fg = '#7AA2F7' })
+      end)
+
+      -- 3) Set up ibl with a thicker character and single highlight
+      require('ibl').setup {
+        indent = {
+          -- This character is thicker than the standard "│"
+          char = '┃',
+          -- char = "│",
+
+          highlight = { 'MyFatBlueIndent' },
+        },
+        scope = {
+          -- Turn off scope lines if you only want indent lines
+          enabled = false,
+        },
+      }
+    end,
+  },
+}
