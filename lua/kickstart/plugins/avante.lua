@@ -17,6 +17,12 @@ return {
     config = function()
       require('avante').setup {
         hints = { enabled = false },
+        mappings = {
+          submit = {
+            normal = '<C-e>',
+            insert = '<C-e>', -- Change this to your preferred key
+          },
+        },
       }
     end,
   },

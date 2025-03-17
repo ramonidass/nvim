@@ -6,7 +6,9 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'gruvbuddy'
+      -- vim.cmd.colorscheme 'gruvbuddy'
+      vim.cmd.colorscheme 'ayu-dark'
+      --
     end,
   },
   'rktjmp/lush.nvim',

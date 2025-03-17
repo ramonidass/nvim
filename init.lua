@@ -104,7 +104,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set('n', '<Leader>n', ':Lexplore<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<Leader>n', ':diffoff!<CR>:buffer#<CR>:Explore<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<Leader>n', ':Oil<CR>', { noremap = true, silent = true, desc = 'Open Oil file explorer' })
-vim.keymap.set('n', '<Leader>n', ':Oil --float<CR>', { noremap = true, silent = true, desc = 'Open Oil in floating window' })
+-- vim.keymap.set('n', '<Leader>n', ':Oil --float<CR>', { noremap = true, silent = true, desc = 'Open Oil in floating window' })
 
 -- Keymaps for Oil.nvim
 -- vim.keymap.set('n', '<Esc><Esc>', function()
