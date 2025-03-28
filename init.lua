@@ -271,6 +271,21 @@ require('lazy').setup({
         { '<leader>g', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
+    config = function(_)
+      -- Delete without yank (affects all d[motion] combos)
+      vim.keymap.set('n', 'd', '"_d', { desc = 'Delete (no yank)', noremap = true, silent = true })
+      vim.keymap.set('v', 'd', '"_d', { desc = 'Delete (no yank)', noremap = true, silent = true })
+
+      -- Change without yank
+      vim.keymap.set('n', 'c', '"_c', { desc = 'Change (no yank)', noremap = true, silent = true })
+      vim.keymap.set('v', 'c', '"_c', { desc = 'Change (no yank)', noremap = true, silent = true })
+
+      -- Still map full commands (not operators) as needed
+      vim.keymap.set('n', 'dd', '"_dd', { desc = 'Delete line (no yank)', noremap = true, silent = true })
+      vim.keymap.set('n', 'D', '"_D', { desc = 'Delete to EOL (no yank)', noremap = true, silent = true })
+      vim.keymap.set('n', 'cc', '"_cc', { desc = 'Change line (no yank)', noremap = true, silent = true })
+      vim.keymap.set('n', 'C', '"_C', { desc = 'Change to EOL (no yank)', noremap = true, silent = true })
+    end,
   },
 
   -- NOTE: Plugins can specify dependencies.

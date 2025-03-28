@@ -8,7 +8,7 @@ return {
     config = function()
       -- vim.cmd.colorscheme 'gruvbuddy'
       vim.cmd.colorscheme 'ayu-dark'
-      --
+      -- vim.cmd.colorscheme 'flexoki'
     end,
   },
   'rktjmp/lush.nvim',
