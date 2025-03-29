@@ -24,6 +24,15 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- Function to show marks
+vim.keymap.set('n', '<leader>ml', ':marks<CR>', { desc = 'Show all marks' })
+
+-- Function to delete marks a-c
+vim.keymap.set('n', '<leader>md', ':delmarks a-c<CR>', { desc = 'Delete marks a to c' })
+
+-- Go to next blank line
+vim.keymap.set('n', '<leader>tl', '/^$<CR>', { desc = 'Jump to next blank line' })
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
