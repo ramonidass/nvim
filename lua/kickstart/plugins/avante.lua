@@ -19,8 +19,8 @@ return {
         hints = { enabled = false },
         mappings = {
           submit = {
-            normal = '<C-e>',
-            insert = '<C-e>', -- Change this to your preferred key
+            normal = '<C-s>',
+            insert = '<C-s>', -- Change this to your preferred key
           },
         },
       }
