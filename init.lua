@@ -1023,9 +1023,10 @@ require('lazy').setup({
   require 'kickstart.plugins.colorschemes',
   require 'kickstart.plugins.colorbuddy',
   require 'kickstart.plugins.avante',
-  require 'kickstart.plugins.notify',
+  -- require 'kickstart.plugins.notify',
   require 'kickstart.plugins.devicons',
   require 'kickstart.plugins.parinfer',
+  require 'kickstart.plugins.snacks',
   --add new plugin
   require('kickstart.plugins.terminal').setup(),
   -- require 'kickstart.plugins.terminal',
