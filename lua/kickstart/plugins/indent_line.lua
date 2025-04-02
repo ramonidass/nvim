@@ -56,14 +56,14 @@ return {
       require('ibl').setup {
         indent = {
           -- This character is thicker than the standard "│"
-          char = '┃',
-          -- char = '│',
+          -- char = '┃',
+          char = '│',
 
           highlight = { 'MyBlueIndent' },
         },
         scope = {
           -- Turn off scope lines if you only want indent lines
-          enabled = true,
+          enabled = false,
         },
       }
     end,
