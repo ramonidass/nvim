@@ -1,6 +1,6 @@
 local function setup_floating_terminal()
-  vim.keymap.set('t', '<esc>', '<c-\\><c-n>', { noremap = true, silent = true }) -- Single Esc to go to Normal mode
-  vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>:lua KillFloatingTerminal()<CR>', { noremap = true, silent = true }) -- Double Esc to kill terminal
+  vim.keymap.set('t', '<leader>`', '<c-\\><c-n>', { noremap = true, silent = true }) -- Single Esc to go to Normal mode
+  vim.keymap.set('t', '<leader>kt', '<c-\\><c-n>:lua KillFloatingTerminal()<CR>', { noremap = true, silent = true }) -- Double Esc to kill terminal
   local state = {
     floating = {
       buf = -1,
