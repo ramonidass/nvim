@@ -350,20 +350,49 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local actions = require 'telescope.actions'
       require('telescope').setup {
-        -- You can put your default mappings / updates / etc. in here
-        --  All the info you're looking for is in `:help telescope.setup()`
-        --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
-        -- pickers = {}
-        extensions = {
-          ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+        defaults = {
+          mappings = {
+            i = { -- Mappings for Insert mode in Telescope prompt
+              -- Map Ctrl-h to open the selected file in a horizontal split
+              ['<C-h>'] = actions.select_vertical,
+
+              -- You might also want mappings for vertical split and tabs:
+              -- ['<C-v>'] = actions.select_vertical,
+              -- ['<C-t>'] = actions.select_tab,
+              -- Default Enter key action (usually opens in current window)
+              -- ['<CR>'] = actions.select_default,
+            },
+            n = { -- Mappings for Normal mode in Telescope results window
+              -- Map Ctrl-h to open the selected file in a horizontal split
+              ['<C-h>'] = actions.select_vertical,
+
+              -- Corresponding mappings for vertical split and tabs:
+              -- ['<C-v>'] = actions.select_vertical,
+              -- ['<C-t>'] = actions.select_tab,
+              -- Default Enter key action
+              -- ['<CR>'] = actions.select_default,
+            },
           },
+          -- other defaults configurations...
+          -- e.g., layout_strategy, layout_config, sorting_strategy, etc.
+        },
+        pickers = {
+          find_files = {
+            -- Your find_files specific configurations...
+            -- theme = "dropdown", -- example
+            -- previewer = false, -- example
+          },
+          -- Your other picker configurations (e.g., live_grep, buffers)...
+        },
+        extensions = {
+          -- Example using ui-select extension (ensure it's installed)
+          -- If you are using this, the theme might be set here instead of defaults/pickers
+          -- ui_select = {
+          --   require("telescope.themes").get_dropdown {}
+          -- }
+          -- Your other extensions configurations...
         },
       }
 
