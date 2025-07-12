@@ -1056,6 +1056,7 @@ require('lazy').setup({
   require 'kickstart.plugins.devicons',
   require 'kickstart.plugins.parinfer',
   require 'kickstart.plugins.snacks',
+  require 'kickstart.plugins.smear-cursor',
   --add new plugin
   require('kickstart.plugins.terminal').setup(),
   -- require 'kickstart.plugins.terminal',
