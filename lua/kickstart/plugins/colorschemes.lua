@@ -6,9 +6,9 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      -- vim.cmd.colorscheme 'gruvbuddy'
-      vim.cmd.colorscheme 'ayu-dark'
-      -- vim.cmd.colorscheme 'flexoki'
+      -- vim.cmd.colorscheme 'tokyonight'
+      -- vim.cmd.colorscheme 'ayu-dark'
+      vim.cmd.colorscheme 'flexoki-dark'
     end,
   },
   'rktjmp/lush.nvim',

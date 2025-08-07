@@ -49,7 +49,9 @@ return {
       hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
         -- Pick a “Tokyo Blue” color. Some popular choices:
         --   #7AA2F7 (TokyoNight) or #61AFEF (OneDark/VSCode-ish)
-        vim.api.nvim_set_hl(0, 'MyBlueIndent', { fg = '#24EAF7' })
+        -- vim.api.nvim_set_hl(0, 'MyBlueIndent', { fg = '#24EAF7' })
+        -- vim.api.nvim_set_hl(0, 'OneDark', { fg = '#61AFEF' })
+        vim.api.nvim_set_hl(0, 'OneDark', { fg = '#4a4a4a' })
       end)
 
       -- 3) Set up ibl with a thicker character and single highlight
@@ -59,7 +61,7 @@ return {
           -- char = '┃',
           char = '│',
 
-          highlight = { 'MyBlueIndent' },
+          highlight = { 'OneDark' },
         },
         scope = {
           -- Turn off scope lines if you only want indent lines
