@@ -991,7 +991,7 @@ require('lazy').setup({
   require 'kickstart.plugins.fugitive',
   require 'kickstart.plugins.colorschemes',
   require 'kickstart.plugins.colorbuddy',
-  require 'kickstart.plugins.avante',
+  -- require 'kickstart.plugins.avante',
   -- require 'kickstart.plugins.notify',
   require 'kickstart.plugins.devicons',
   require 'kickstart.plugins.parinfer',
