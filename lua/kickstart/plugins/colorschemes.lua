@@ -36,6 +36,8 @@ return {
   'ricardoraposo/gruvbox-minor.nvim',
   'NTBBloodbath/sweetie.nvim',
   'vim-scripts/MountainDew.vim',
+  'mcauley-penney/techbase.nvim',
+  { 'aktersnurra/no-clown-fiesta.nvim', name = 'nohomo' },
   {
     'maxmx03/fluoromachine.nvim',
     -- config = function()
